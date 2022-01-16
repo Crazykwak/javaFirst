@@ -10,7 +10,8 @@ public class Test {
     public static void main(String[] args){
         int[] x = {5, 4, 3};
         Test avgNum = new Test();
-        System.out.println("평균은" + avgNum.plusNum(x));
+        String a = "Hello Java! my Java";
+        System.out.println("정답은 " + a.indexOf("Java"));
     }
 }
 
