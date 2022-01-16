@@ -13,3 +13,5 @@ public class Test {
         System.out.println("평균은" + avgNum.plusNum(x));
     }
 }
+
+//  git test text in Ubuntu
