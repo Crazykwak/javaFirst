@@ -10,8 +10,10 @@ public class Test {
     public static void main(String[] args){
         int[] x = {5, 4, 3};
         Test avgNum = new Test();
-        String a = "Hello Java! my Java";
-        System.out.println("정답은 " + a.indexOf("Java"));
+        String a = "Hello Java";
+        String[] result = a.split(" ");
+        System.out.println(result[0]);
+        System.out.println(result[1]);
     }
 }
 
