@@ -7,14 +7,14 @@ public class Test {
         for (int j : array) sum += j;
         return sum / array.length;
     }
+    public String arrStr(String str){
+        String[] result = str.split(" ");
+        return Arrays.toString(result);
+    }
     public static void main(String[] args){
-        int[] x = {5, 4, 3};
-        Test avgNum = new Test();
+        Test met = new Test();
         String a = "Hello Java";
-        String[] result = a.split(" ");
-        System.out.println(result[0]);
-        System.out.println(result[1]);
-        System.out.println(Arrays.toString(result));
+        System.out.println(met.arrStr(a));
     }
 }
 
