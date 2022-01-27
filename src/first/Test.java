@@ -45,11 +45,31 @@ public class Test {
         System.out.printf("%n 10은 10진수로 10이고 8진수로는 %o 이고 16진수로는 %x다.", ten, 10);
     }
 
+    public void intToString(){
+        int exp = 12345;
+        String tab = String.valueOf(exp); // 1번째 방법
+        String tab2 = "" + exp; // 빈 문자열을 더해주면 문자가 됨
+        String tab3 = Integer.toString(exp); // 길다길어
+        System.out.println(tab3.length());
+        System.out.println(tab + exp); //2번 방법을 보면 알겠지만 문자가 돼서 걍 옆으로 붙어짐.
+        // 1234512345가 된다.
+        System.out.println((tab+exp).getClass().getSimpleName()); // String가 출력
+    }
+
+    public void stringToInt(){
+        String a = "123";
+        int b = 1;
+        int tab = Integer.valueOf(a);
+        System.out.println(a+b); // 1231이 출력
+        System.out.println(b+tab); //124 출력
+        System.out.println((b+tab) + " 이렇게 할거면 괄호를 치세요");
+    }
+
     public static void main(String[] args){
         Test met = new Test();
         String a = "Hello Java";
         System.out.println(met.arrStr(a));
-        met.prinF();
+        met.stringToInt();
     }
 }
 
