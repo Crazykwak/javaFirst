@@ -65,11 +65,22 @@ public class Test {
         System.out.println((b+tab) + " 이렇게 할거면 괄호를 치세요");
     }
 
+    public void intodouble(){
+        int pp = 61;
+        int ff = 8;
+        float pf = pp/ff;
+        float ppff = (float)pp/ff;
+        System.out.println((float)pp/ff);
+        System.out.println(pf);
+        System.out.println(ppff);
+        System.out.println((int)ppff);
+    }
+
     public static void main(String[] args){
         Test met = new Test();
         String a = "Hello Java";
         System.out.println(met.arrStr(a));
-        met.stringToInt();
+
     }
 }
 
