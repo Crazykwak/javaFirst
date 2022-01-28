@@ -83,5 +83,3 @@ public class Test {
 
     }
 }
-
-//  git test text in Ubuntu
