@@ -84,11 +84,13 @@ public class Test {
         System.out.println(power);
     }
 
-    public void whatIf(){
-        int kor=70, eng = 90, math=100;
+    public void whatIf() {
+        int kor = 70, eng = 90, math = 100;
 
-        if(kor >= 80) {
+        if (kor >= 80) {
             System.out.println("국어는 잘봤구만?");
+        } else if(math >=80){
+            System.out.println("국어는 그냥 그렇고 수학은 잘봤구만?");
         } else {
             System.out.println("썩 꺼져!!");
         }
