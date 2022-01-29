@@ -94,12 +94,42 @@ public class Test {
         } else {
             System.out.println("썩 꺼져!!");
         }
-
     }
+
+    public void swit(){
+        int age = 33;
+        if(age >= 10 && age <20) age = 10;
+        else if(age >=20 && age <30) age = 20;
+        else if(age >=30 && age <40) age = 30;
+        else if(age >=40 && age <50) age = 40;
+
+        switch (age){
+            case 10:{
+                System.out.println("자네는 너무 어리군");
+                break;
+            }
+            case 20:{
+                System.out.println("20대는 젊어서 좋겠군");
+                break;
+            }
+            case 30:{
+                System.out.println("30대는 건강하지");
+                break;
+            }
+            case 40:{
+                System.out.println("zzzzzz");
+                break;
+            }
+            default:{
+                System.out.println("정확하게 쓰도록");
+            }
+        }
+    }
+
     public static void main(String[] args){
         Test met = new Test();
         String a = "Hello Java";
-        met.whatIf();
+        met.swit();
 
     }
 }
