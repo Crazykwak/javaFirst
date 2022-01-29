@@ -1,5 +1,6 @@
 package first;
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Test {
     public int plusNum(int[] array) {
@@ -76,10 +77,27 @@ public class Test {
         System.out.println((int)ppff);
     }
 
+    public void arrlist(){
+        ArrayList power = new ArrayList();
+        power.add("A");
+        power.add("b");
+        System.out.println(power);
+    }
+
+    public void whatIf(){
+        int kor=70, eng = 90, math=100;
+
+        if(kor >= 80) {
+            System.out.println("국어는 잘봤구만?");
+        } else {
+            System.out.println("썩 꺼져!!");
+        }
+
+    }
     public static void main(String[] args){
         Test met = new Test();
         String a = "Hello Java";
-        System.out.println(met.arrStr(a));
+        met.whatIf();
 
     }
 }
