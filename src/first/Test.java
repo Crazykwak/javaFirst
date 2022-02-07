@@ -126,10 +126,31 @@ public class Test {
         }
     }
 
+    public void threeCal() {
+        int hour = 0;
+        String test = hour < 12 ? "AM" : "PM";
+        hour = test == "AM" ? hour : hour-12;
+        System.out.println(test + " " +hour);
+    }
+
+    public void aloop(){
+        for(int i = 65; i <= 90; i++){
+            System.out.print((char)i + " ");
+            if(i == 90) System.out.println();
+        }
+        int num = 1;
+        while (num <= 30){
+            if(num % 2 == 0) System.out.print(num + " ");
+            num++;
+        }
+    }
+
     public static void main(String[] args){
         Test met = new Test();
         String a = "Hello Java";
-        met.swit();
+        part2Arr arr = new part2Arr();
+        arr.tArr();
+
 
     }
 }
