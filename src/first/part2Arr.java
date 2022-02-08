@@ -26,6 +26,13 @@ public class part2Arr {
         int[] arr2 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
         System.arraycopy(arr, 2, arr2, 4, 3);
         System.out.println(Arrays.toString(arr2));
+    }
 
+    public void twoByArr(){
+        String[][] str = {
+            {"한국", "일본", "중국"},
+            {"태국", "베트남", "필리핀"}
+        };
+        System.out.println(Arrays.deepToString(str));
     }
 }
