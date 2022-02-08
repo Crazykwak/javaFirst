@@ -1,5 +1,6 @@
 package first;
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class part2Arr {
 
@@ -34,5 +35,45 @@ public class part2Arr {
             {"태국", "베트남", "필리핀"}
         };
         System.out.println(Arrays.deepToString(str));
+
+        for(int i = 0; i < str.length; i++){
+            for(int j =0; j < str[i].length; j++){
+                System.out.print(str[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        String[] strAr = {"Kim", "Lee", "Park"};
+        System.out.println(strAr[0].charAt(2));
+        for(int i = 0; i < strAr.length; i++){
+            for(int j = 0; j < strAr[i].length();j++) {
+                System.out.print(strAr[i].charAt(j));
+            }
+            System.out.println();
+        }
+    }
+
+    public void inputArr(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("행의 갯수를 입력하고 [Enter]를 치세요 = ");
+        int R = sc.nextInt();
+        System.out.print("열의 갯수를 입력하고 [Enter]를 치세요 = ");
+        int C = sc.nextInt();
+
+        char[][] gamemap = new char[R][C];
+        String[] strAr = new String[R];
+
+        for(int i = 0; i < R; i++){
+            System.out.printf("%s행의 문자를 입력해주세요(길이제한 %s) = ", i+1,C);
+            strAr[i] = sc.next();
+            if(strAr[i].length() > C){
+                System.out.print("ERROR!");
+                break;
+            }
+            for(int j = 0; j < C; j++){
+                gamemap[i][j] = strAr[i].charAt(j);
+            }
+        }
+        System.out.print(Arrays.deepToString(gamemap));
     }
 }
