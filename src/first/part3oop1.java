@@ -40,3 +40,24 @@ class FarmMachine {
         System.out.println("Farm-machine is grinding.");
     }
 }
+
+class Person{
+    // Attribute 속성
+    int age = 11;
+    String name = "홍길동";
+
+    //Constructor 생성자
+    Person(){}
+    Person(int age, String name){
+        this.age = age;
+        this.name = name;
+    } //오버로딩
+
+    //Method 메서드
+    void move(){
+        System.out.println("Person is moving");
+    }
+    void who(){
+        System.out.println("age is " + age + " name is " + name);
+    }
+}
