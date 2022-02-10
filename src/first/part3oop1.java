@@ -61,3 +61,19 @@ class Person{
         System.out.println("age is " + age + " name is " + name);
     }
 }
+
+class cPerson extends Person{
+    String school;
+
+    cPerson(){}
+    cPerson(int age, String name, String school){
+        super(age, name);
+//        this.age = age;
+//        this.name = name;
+        this.school = school;
+    }
+
+    void who(){
+        System.out.println(name +" "+ age + " years old," +"school is " + school);
+    }
+}

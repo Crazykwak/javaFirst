@@ -27,6 +27,9 @@ public class Test {
         J.who();
         S.who();
         T.who();
+
+        cPerson ch = new cPerson(13, "곽여운", "대하초");
+        ch.who();
     }
 }
 
