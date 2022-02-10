@@ -1,18 +1,23 @@
 package first;
 
 
-import java.util.Arrays;
-
 public class Test {
     public static void main(String[] args){
-        part1 met = new part1();
-        part2Arr arr = new part2Arr();
-        part3 method = new part3();
-        tNum a = new tNum(100);
+        FarmMachine farm = new FarmMachine();
 
-        String[] result = method.change("Korea", "usa");
-        System.out.println(Arrays.toString(result));
+        farm.price = 10000;
+        farm.year = 10;
+        farm.color = "red";
 
+        System.out.println(String.format("%,d",farm.price));
+        System.out.println(farm.year);
+        System.out.println(farm.color);
+        farm.move();
+        farm.dig();
+        farm.grind();
+
+        part3oop1 p3 = new part3oop1();
+        p3.Jinsu();
     }
 }
 
