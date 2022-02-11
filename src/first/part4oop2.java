@@ -21,8 +21,10 @@ class Person {
 }
 
 interface Allowance{
-    abstract void in(int price, String name);
-    abstract void out(int price, String name);
+    String nation = "대한민국";
+    void in(int price, String name);
+    void out(int price, String name);
+    // public abstract 생략됨.
 }
 
 interface Train{

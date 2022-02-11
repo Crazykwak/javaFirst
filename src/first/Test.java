@@ -8,6 +8,8 @@ public class Test {
         k.in(30000, "복권");
         k.out(15000, "음주가무");
         k.train(15000, "경마");
+        System.out.println(k.nation);
+        System.out.println(Allowance.nation);
 
     }
 }
