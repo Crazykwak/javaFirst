@@ -77,78 +77,97 @@ public class part3oop1 {
 //        System.out.println(name +" "+ age + " years old," +"school is " + school);
 //    }
 }
+//
+//class Persons {
+//    private String name;
+//    private int age;
+//    private int h;
+//    private int w;
+//
+//    Persons(){}
+//    Persons(String name, int age, int h, int w){
+//        this.name = name;
+//        this.age = age;
+//        this.h = h;
+//        this.w = w;
+//    }
+//
+//    public String getName() {return name;}
+//    public void setName(String name) {this.name = name;}
+//
+//    public int getAge() {return age;}
+//    public void setAge(int age) {this.age = age;}
+//
+//    public int getH() {return h;}
+//    public void setH(int h) {this.h = h;}
+//
+//    public int getW() {return w;}
+//    public void setW(int w) {this.w = w;}
+//
+//
+//    void Walk(){
+//        System.out.println(this.name + " 이동중..");
+//    }
+//}
+//
+//class Villain extends Persons{
+//    private String u_Key;
+//    private int weapon;
+//    private double power;
+//
+//    Villain(){}
+//    Villain(String name, int age, int h, int w, String u_Key ,int weapon, double power){
+//        super(name, age, h, w);
+//        this.u_Key = u_Key;
+//        this.weapon = weapon;
+//        this.power = power;
+//    }
+//
+//    public String getU_Key(){return u_Key;}
+//    public void setU_Key(String u_Key) {this.u_Key = u_Key;}
+//    public int getWeapon(){return weapon;}
+//    public void setWeapon(int weapon) {this.weapon = weapon;}
+//    public double getPower(){return power;}
+//    public void setPower(double power) {this.power = power;}
+//
+//    public String rWeapon(){
+//        switch (getWeapon()){
+//            case 1 : {return "창";}
+//            case 2 : {return "방패";}
+//            case 3 : {return "칼";}
+//            case 4 : {return "총";}
+//            default: {return "--";}
+//        }
+//    }
+//
+//    void who(){
+//        System.out.println("이름: " + getName());
+//        System.out.println("나이: " + getAge() + "살");
+//        System.out.println("키: " + getH() + "cm");
+//        System.out.println("몸무게: " + getW() + "kg");
+//        System.out.println("악당 번호: " + getU_Key());
+//        System.out.println("무기: " + rWeapon());
+//        System.out.println("파워: " + getPower());
+//    }
+//}
 
-class Persons {
+class people {
     private String name;
     private int age;
-    private int h;
-    private int w;
 
-    Persons(){}
-    Persons(String name, int age, int h, int w){
+    people(){}
+    people(String name, int age){
         this.name = name;
         this.age = age;
-        this.h = h;
-        this.w = w;
     }
 
-    public String getName() {return name;}
-    public void setName(String name) {this.name = name;}
+    public String getName(){return name;}
+    public void setName(String name){this.name = name;}
+    public int getAge(){return age;}
+    public void setAge(int age){this.age = age;}
 
-    public int getAge() {return age;}
-    public void setAge(int age) {this.age = age;}
-
-    public int getH() {return h;}
-    public void setH(int h) {this.h = h;}
-
-    public int getW() {return w;}
-    public void setW(int w) {this.w = w;}
-
-
-    void Walk(){
-        System.out.println(getName() + " 이동중..");
+    public void who(){
+        System.out.println("이름 : " + getName());
+        System.out.println("나이 : " + getAge());
     }
-}
-
-class Villain extends Persons{
-    private String u_Key;
-    private int weapon;
-    private double power;
-
-    Villain(){}
-    Villain(String name, int age, int h, int w, String u_Key ,int weapon, double power){
-        super(name, age, h, w);
-        this.u_Key = u_Key;
-        this.weapon = weapon;
-        this.power = power;
-    }
-
-    public String getU_Key(){return u_Key;}
-    public void setU_Key(String u_Key) {this.u_Key = u_Key;}
-    public int getWeapon(){return weapon;}
-    public void setWeapon(int weapon) {this.weapon = weapon;}
-    public double getPower(){return power;}
-    public void setPower(double power) {this.power = power;}
-
-    public String rWeapon(){
-        switch (getWeapon()){
-            case 1 : {return "창";}
-            case 2 : {return "방패";}
-            case 3 : {return "칼";}
-            case 4 : {return "총";}
-            default: {return "--";}
-        }
-    }
-
-    void who(){
-        System.out.println("이름: " + getName());
-        System.out.println("나이: " + getAge() + "살");
-        System.out.println("키: " + getH() + "cm");
-        System.out.println("몸무게: " + getW() + "kg");
-        System.out.println("악당 번호: " + getU_Key());
-        System.out.println("무기: " + rWeapon());
-        System.out.println("파워: " + getPower());
-
-    }
-
 }

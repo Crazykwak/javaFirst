@@ -1,47 +1,26 @@
 package first;
 
+import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args){
+        int[] ar1 = {20,21,22,23,24};
+        char[] ar2 = {'a', 'b', 'c', 'd', 'e'};
+        String[] na = {"홍길동", "김또깡", "곽영희", "김철수", "밥샵"};
+        people[] ar3 = new people[5];
 
-//        FarmMachine farm = new FarmMachine();
-//        farm.price = 10000;
-//        farm.year = 10;
-//        farm.color = "red";
-//        System.out.println(String.format("%,d",farm.price));
-//        System.out.println(farm.year);
-//        System.out.println(farm.color);
-//        farm.move();
-//        farm.dig();
-//        farm.grind();
-//
-//        part3oop1 p3 = new part3oop1();
-//        p3.Jinsu();
-//
-//        Person P = new Person(20, "김백수");
-//        Person J = new Person(30, "곽백수");
-//        Person S = new Person(44, "황근출");
-//        Person T = new Person();
-//
-//        P.who();
-//        J.who();
-//        S.who();
-//        T.who();
-//
-//        cPerson ch = new cPerson(13, "곽여운", "대하초");
-//        ch.who();
+        for(int i = 0; i < ar1.length; i++){
+            ar3[i] = new people(na[i], ar1[i]);
 
-        Villain zombie = new Villain("좀비",20, 180, 80, "15001231", 1, 99.5);
-        Villain mong = new Villain("몽달귀신",40, 150, 40, "14001011", 0, 11.5);
-        Villain ogre = new Villain("도깨비",30, 175, 70, "11001121", 2, 140.5);
-        zombie.who();
-        zombie.Walk();
-        System.out.println();
-        mong.who();
-        mong.Walk();
-        System.out.println();
-        ogre.who();
-        ogre.Walk();
+            ar3[i].who();
+            System.out.println();
+        }
+
+        for(int i = 0; i < ar3.length; i++){
+            System.out.println(i + "번 후보자 --> 나이 : "
+                    + ar3[i].getAge() + ",  이름 : " + ar3[i].getName());
+        }
+
     }
 }
 
