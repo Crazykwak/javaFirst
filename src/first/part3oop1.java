@@ -171,3 +171,47 @@ class people {
         System.out.println("나이 : " + getAge());
     }
 }
+
+abstract class Animal {
+    private String name;
+
+    Animal(){}
+    Animal(String name){
+        this.name = name;
+    }
+
+    public String getName(){return name;}
+    void setName(String name){this.name = name;}
+
+    abstract void cry();
+    void myName(){System.out.println("이름은 " + getName());}
+}
+
+class bird extends Animal {
+    private String name;
+
+    bird(){}
+    bird(String name){
+        this.name = name;
+    }
+    public String getName(){return name;}
+    void setName(String name){this.name = name;}
+
+    void fly() {System.out.println("날다");}
+    void cry() {System.out.println("짹짹");}
+}
+
+class dog extends Animal {
+    dog(){}
+    dog(String name){
+        super(name);
+    }
+    void cry() {System.out.println("멍멍");}
+}
+
+abstract class cow extends Animal {
+    cow(){}
+    cow(String name){
+        super(name);
+    }
+}
