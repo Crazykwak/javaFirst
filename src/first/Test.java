@@ -11,6 +11,17 @@ public class Test {
         System.out.println(k.nation);
         System.out.println(Allowance.nation);
 
+
+        Student s1 = new Student("백", 17, 80);
+        Person s2 = new Student("듀", 20, 70);
+        Person p1 = new Person("팍", 20, 17);
+
+        s2.who();
+
+        ((Student)s2).in(100, "테스트");
+
+
+
     }
 }
 
