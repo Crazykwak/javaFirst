@@ -6,15 +6,19 @@ import java.util.Collections;
 
 public class Test {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
-        Integer[] a = {88, 50, 38, 100, 90, 100, 99, 65};
+        int[] a = {88, 50, 38, 100, 90, 100, 99, 65};
 
-        Arrays.sort(a);
-        System.out.println("오름차순 정렬 : "+ Arrays.toString(a));
+        Rank rnk = new Rank();
+        int[] b = rnk.rank(a);
+        System.out.println(Arrays.toString(b));
 
-        Arrays.sort(a, Collections.reverseOrder());
-        System.out.println("내림차순 정렬 : "+ Arrays.toString(a));
+        for (int i = 0; i < a.length; i++) {
+            System.out.printf("%d점은 %d등이다. ", a[i], b[i]);
+            if(i == a.length/2 -1) System.out.println();
+        }
+
     }
 }
 

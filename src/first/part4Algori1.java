@@ -1,5 +1,8 @@
 package first;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class part4Algori1 {
 }
 
@@ -35,5 +38,23 @@ class MaxMin {
             }
         }
         return result;
+    }
+}
+
+class Rank{
+    public int[] rank(int[] n){
+        int[] res = new int[n.length];
+        Arrays.sort(n);
+
+        for(int i = 0; i < n.length; i++){
+            res[i] = 1;
+            for(int j = 0; j < res.length; j++){
+                if(n[i] < n[j]){
+                    res[i]++;
+                }
+            }
+
+        }
+        return res;
     }
 }
