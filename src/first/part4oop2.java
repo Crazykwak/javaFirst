@@ -56,3 +56,31 @@ class Student extends Person implements Allowance, Train{
         super.im();
     }
 }
+
+abstract class Car {
+    abstract void run();
+}
+
+class Ambul extends Car {
+    void run() {System.out.println("삐뽀삐뽀~");}
+}
+
+class Culti extends Car {
+    void run() {System.out.println("덜컹덜컹");}
+}
+
+class Sport extends Car {
+    void run() {System.out.println("씽~");}
+}
+
+class People {
+    public void run() {System.out.println("사람임");}
+}
+
+class Batmans extends People {
+    public void run() {System.out.println("배트맨임");}
+}
+
+class ironman extends People {
+    public void run() {System.out.println("아이언맨임");}
+}

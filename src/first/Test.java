@@ -1,27 +1,31 @@
 package first;
 
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class Test {
+
     public static void main(String[] args){
-        Student k = new Student("한구",17, 77);
-        k.who();
-        k.in(30000, "복권");
-        k.out(15000, "음주가무");
-        k.train(15000, "경마");
-        System.out.println(k.nation);
-        System.out.println(Allowance.nation);
+
+        MaxMin a = new MaxMin();
+
+        int[] randomNum = new int[10];
+        for(int i = 0; i < randomNum.length; i++){
+            randomNum[i] = (int)(Math.random()*100);
+        }
+
+        System.out.println("Math로 생성된 숫자 " + Arrays.toString(randomNum));
+        System.out.println("[최대값, 최소값] = " + Arrays.toString(a.maxmin(randomNum)));
 
 
-        Student s1 = new Student("백", 17, 80);
-        Person s2 = new Student("듀", 20, 70);
-        Person p1 = new Person("팍", 20, 17);
+        Random lott = new Random();
+        for(int i = 0; i < randomNum.length; i++){
+            randomNum[i] = lott.nextInt(101);
+        }
 
-        s2.who();
-
-        ((Student)s2).in(100, "테스트");
-
-
-
+        System.out.println("Random 클래스로 생성된 숫자 = "+Arrays.toString(randomNum));
+        System.out.println("[최대값, 최소값] = " + Arrays.toString(a.maxmin(randomNum)));
     }
 }
 
