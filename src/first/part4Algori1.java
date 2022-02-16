@@ -58,3 +58,15 @@ class Rank{
         return res;
     }
 }
+
+class ZeroToNine {
+    public int[] numCount(int[] n){
+        int[] res = new int[10];
+
+        for(int i = 0 ; i < n.length; i++) {
+            res[n[i]]++;
+            }
+
+        return res;
+    }
+}
