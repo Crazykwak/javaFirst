@@ -11,6 +11,7 @@ public class Test {
         part4Algori2 al = new part4Algori2();
 
         al.evenTen();
+        al.star();
     }
 }
 

@@ -1,5 +1,7 @@
 package first;
 
+import java.util.Arrays;
+
 public class part4Algori2 {
     public int[] even(int n){
         int[] res = new int[n/2];
@@ -44,12 +46,15 @@ public class part4Algori2 {
         }
         return res;
     }
-
     public void evenTen(){
-        for(int i = 0; i < 4; i++){
+        outerloop: for(int i = 0; i < 4; i++){
             for(int j =0; j < 10; j++){
                 int Num = (i*10)+j;
                 if(Num % 2 !=0){
+                    if(j == 1){
+                        System.out.println();
+                        continue outerloop;
+                    }
                     continue;
                 } else {
                     System.out.print(Num + " ");
@@ -58,5 +63,23 @@ public class part4Algori2 {
             System.out.print("\t\t"+i*10);
             System.out.println();
         }
+    }
+
+    public void star(){
+        String[][] st = new String[5][5];
+
+        for(int i = 0; i < 5; i++){
+            for(int j = 0; j < 5; j++){
+                if(i == 2 && j == 2){
+                    st[i][j] = " ★ ";
+                } else {
+                    st[i][j] = " □ ";
+                }
+                System.out.print(st[i][j]);
+            }
+            System.out.println();
+        }
+
+        System.out.print(Arrays.deepToString(st));
     }
 }
