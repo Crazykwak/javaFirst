@@ -10,8 +10,11 @@ public class Test {
 
         part4Algori2 al = new part4Algori2();
 
-        al.evenTen();
-        al.star();
+
+
+        int[] a = {1,1,1,1,1,1,1,2,2,3,3};
+
+        al.elec(a, 3);
     }
 }
 

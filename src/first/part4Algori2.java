@@ -82,4 +82,37 @@ public class part4Algori2 {
 
         System.out.print(Arrays.deepToString(st));
     }
+
+
+    public void elec(int[] a, int num){
+        int[] count = new int[num];
+        int max;
+
+        for(int i = 0; i < a.length; i++){
+            count[a[i]-1]++;
+        }
+
+        max = Arrays.stream(count).max().getAsInt();
+
+        for(int i = 0; i < count.length; i++){
+            System.out.printf("%d번 후보 --> %d 표\n", i+1, count[i]);
+            if(count[i] == max){
+                System.out.printf("가장 많은 득표 수 --> %d표 이고, 후보자는 %d번 후보자 입니다. \n", max, i+1);
+                if(max <= a.length/2){
+                    System.out.println("과봔수 이상 득표에 실패 하였습니다. --> 미당선");
+                } else {
+                    System.out.println("과반수 이상 득표에 성공 하였습니다. --> 당선");
+                }
+            }
+        }
+
+
+
+
+    }
+
+
+
+
+
 }
