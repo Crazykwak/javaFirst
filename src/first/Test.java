@@ -2,31 +2,28 @@ package first;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Iterator;
 
 public class Test {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer[]> A = new ArrayList<Integer[]>();
-        A.add(new Integer[]{1,2});
-        A.add(new Integer[]{3,4});
-        A.add(new Integer[]{5,6});
+        ArrayList<String> A = new ArrayList<String>();
+        A.add("악어");
+        A.add("하마");
+        A.add("타조");
+        A.add("당나귀");
 
+        Iterator<String> iter = A.iterator();
 
-        for(Integer[] i : A){
-            System.out.println(Arrays.deepToString(i));
+        while(iter.hasNext()){
+           String str = iter.next();
+           if( "하마".equals(str)){
+               System.out.println("하마 삭제");
+               iter.remove();
+           }
         }
 
-        for(int i = 0; i < A.size(); i++){
-            System.out.println(A.get(i)[0]);
-        }
-
-        for(int i = 0; i < A.size(); i++){
-            for(int j =0; j < A.get(0).length; j++){
-                System.out.print(A.get(i)[j] + " ");
-            }
-            System.out.println();
-        }
+        System.out.println(A);
     }
 }
