@@ -2,26 +2,31 @@ package first;
 
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Test {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> A = new ArrayList<Integer>();
-        A.add(3);
-        A.add(5);
-        A.add(7);
-        A.add(9);
-        ArrayList<Integer> B = new ArrayList<Integer>();
-        B.add(5);
-        B.add(9);
-        System.out.println(A.size());
-        System.out.println(A);
-        System.out.println(B);
-        A.removeAll(B);
-        System.out.println("A-B = " + A );
-        System.out.println(A.size());
+        ArrayList<Integer[]> A = new ArrayList<Integer[]>();
+        A.add(new Integer[]{1,2});
+        A.add(new Integer[]{3,4});
+        A.add(new Integer[]{5,6});
+
+
+        for(Integer[] i : A){
+            System.out.println(Arrays.deepToString(i));
+        }
+
+        for(int i = 0; i < A.size(); i++){
+            System.out.println(A.get(i)[0]);
+        }
+
+        for(int i = 0; i < A.size(); i++){
+            for(int j =0; j < A.get(0).length; j++){
+                System.out.print(A.get(i)[j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
-
-//pull test complete
