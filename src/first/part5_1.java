@@ -41,3 +41,5 @@ class Sample2 <T> {
         System.out.println(obj.getClass().getName());
     }
 }
+
+
