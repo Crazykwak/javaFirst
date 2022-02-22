@@ -1,5 +1,7 @@
 package first;
 
+import java.util.ArrayList;
+
 public class part5_1 {
 }
 
@@ -42,4 +44,15 @@ class Sample2 <T> {
     }
 }
 
+class RandomN {
 
+    void swa(){
+        ArrayList<Integer> Rnum = new ArrayList<>();
+
+        for (int i = 0; i < 10; i++) {
+            Rnum.add((int) (Math.random() * 10 + 1));
+        }
+
+        System.out.println(Rnum);
+    };
+}
